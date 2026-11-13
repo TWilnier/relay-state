@@ -12,7 +12,12 @@
     body{margin:0;background:radial-gradient(circle at 20% 0%,#0d1a20 0,#050709 38%),var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;letter-spacing:.02em}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.025) 4px)}
     .wrap{width:min(1100px,calc(100% - 40px));margin:auto}
-    header{min-height:88vh;display:grid;place-items:center;text-align:center;padding:72px 0 50px;border-bottom:1px solid var(--line)}
+    header{min-height:88vh;display:grid;place-items:center;text-align:center;padding:110px 0 76px;border-bottom:1px solid var(--line);position:relative;isolation:isolate;overflow:hidden}
+    header:before{content:"";position:absolute;inset:0;z-index:-2;background-color:#09111b;background-image:url("relay-state-header.jpg"),url("all-systems-normal.png");background-size:cover;background-position:center center;background-repeat:no-repeat;filter:brightness(.63) saturate(.8)}
+    header:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(3,6,10,.62) 0%,rgba(3,6,10,.38) 48%,rgba(3,6,10,.94) 100%)}
+    header .wrap{position:relative;z-index:1}
+    header .logo{max-width:540px;filter:drop-shadow(0 7px 22px rgba(0,0,0,.8))}
+    header .tagline,header .motto,header nav{filter:drop-shadow(0 2px 9px rgba(0,0,0,.95))}
     .logo{width:min(680px,90vw);display:block;margin:0 auto 28px;filter:drop-shadow(0 0 22px rgba(73,225,232,.09))}
     .tagline{text-transform:uppercase;letter-spacing:.24em;font-size:.82rem;color:var(--cyan);margin:0 0 16px}
     .motto{font-family:"Courier New",monospace;color:#c8d1d3;font-size:1.03rem;margin:0 0 30px}
